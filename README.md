@@ -46,6 +46,7 @@ source venv_CloudCover/bin/activate
 # install python dependencies
 pip install -r requirements.txt
 ```
+The code is implemented for parallelized training using multiprocessing with the spawn method. It should work on a single GPU.
 
 ## Datasets
 
