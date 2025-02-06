@@ -72,6 +72,9 @@ CloudCover
       ├──Pesos_Difusion/  (Classes 1,2,3,4,5,6,7)
 ```
 
+Here you can watch a quick demo of how we obtain syntetic images from gaussian noise.
+
+![add](/assets/output.gif)
 
 
 ## Training
