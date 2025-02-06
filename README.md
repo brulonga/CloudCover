@@ -61,7 +61,7 @@ CloudCover
       ├──test/       (Real images, 9000)
 ```
 
-The synthetic images can be obtained through the pre-trained weights and the corresponding Jupyter notebook.
+The synthetic images can be obtained through the pre-trained weights and the corresponding Jupyter notebook. You must change the paths to the images.
 
 You can download the pretrained U-Net weights for diffusion here: [Pesos_Difusion](https://drive.google.com/drive/folders/18Uida-rjl7EKlqdIhzDRHJMQwDY0YvHK?usp=drive_link)
 
@@ -72,7 +72,7 @@ CloudCover
       ├──Pesos_Difusion/  (Classes 1,2,3,4,5,6,7)
 ```
 
-Here you can watch a quick demo of how we obtain syntetic images from gaussian noise.
+Here you can watch a quick demo of how we obtain a syntetic image from class 4 oktas from gaussian noise.
 
 ![add](/assets/output.gif)
 
