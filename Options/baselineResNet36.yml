@@ -1,0 +1,58 @@
+root_path: /home/brulon/Documentos/TFG/CloudCover
+
+#### training devices
+device:
+  cuda: True
+  gpus: 0
+  ids: [0] 
+
+#### datasets      ###nOT IMPLEMENTED YET
+datasets:
+  name: AllSky           #Options: LOLv1 | LOLV2 | GoPRO
+  input_size: [3, 128, 128]
+  n_workers: 4  # per GPU
+  entrenamiento:
+    entrenamiento_path: Datasets/AllSky/entrenamiento
+    batch_size_entrenamiento: 16
+    transform: AllSky
+  validacion:
+    validacion_path: Datasets/AllSky/validacion
+    batch_size_validacion: 16
+  test:
+    test_path: Datasets/AllSky/test
+    batch_size_test: 1
+
+#### network structures
+network:
+  name: ResNet36
+  n: 9 #numero de bloques residuales en un n_block
+  num_classes: 9 #numero de clases en las que clasificar
+  activation: Mish 
+  save_weights: ResNet36
+  save_path: Images/ResNet36
+
+#### training settings: learning rate scheme, loss
+train:
+  optimizer: Adam             #Options: adam | adagrad | adadelta | sgd
+  lr_initial: !!float 1e-4
+  lr_scheduler: OneCycleLR  #Options: CosineAnnealing | ResduceLROnPlateau | OneCycleLR
+  epochs: 100
+  weight_decay: !!float 1e-4
+  eta_min: !!float 1e-7
+  accuracy: accuracy   #Choose the most important metric for your context 
+  loss: CustomCrossEntropyLoss
+  max_lr: !float 1e-4
+  div_factor: !!float 10 
+  final_div_factor: !!float 1000
+
+#### wandb:
+wandb:
+  init: True  #If you want to log the results to wandb 
+  project: CloudCover
+  entity: cidautai
+  name: ResNet36_CloudCover
+  save_code: True
+  resume: never # resume: must, if uploading to an existing project
+  id: # must be empty if don't want to overwrite an existing project
+
+
