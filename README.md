@@ -1,4 +1,4 @@
-# Convlutional Neural Networks for Cloud Cover classification in all sky images
+# Convolutional Neural Networks for Cloud Cover classification in all sky images
 
 Bruno Longarela
 
