@@ -93,3 +93,4 @@ Only evaluation code isn´t implemented yet, you can run just on evaluation by m
 ## Contact
 
 If you have any questions, please contact longarela.bruno@gmail.com
+# VAE
